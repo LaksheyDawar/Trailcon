@@ -7,8 +7,8 @@
 <?php
 	if(!empty($posts)){ 
 		echo "<table>
-				<tr><td><a><b>Name</b></a></td>";
-		echo "<td><a style='padding-left:5em'><b>Email</a></b></td></tr>";
+				<tr><td><a><b>".$lang['name']."</b></a></td>";
+		echo "<td><a style='padding-left:5em'><b>".$lang['email']."</a></b></td></tr>";
 			foreach($posts as $value){
 				echo "<tr>
 						<td><a>".$value["name"]."</a></td>";

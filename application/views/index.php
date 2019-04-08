@@ -2,7 +2,7 @@
 <html>
 <head><title> Trailcon Leasing </title></head>
 <body>
-<h1></h1>
+<h3><a href ="../contest">Contest</a></h3>
 <?php
 $i = 1;
 foreach ($arr as $value){ ?>

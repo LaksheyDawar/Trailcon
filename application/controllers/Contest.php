@@ -4,13 +4,22 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Contest extends CI_Controller {
 public function index(){
-
+		$this->lang->load('translations'); //load language 
+		$lang['name'] = $this->lang->line('name');
+		$lang['email'] = $this->lang->line('email');
+		$data['lang'] = $lang;
 		$data['posts'] = $this->Contest_model->get_all_entries();	//get all entries from the model
-		$this->load->view('contest/contest', $data);
+		$this->load->view('contest/contest', $data,'translations');
 
 }
 public function details($id = NULL) {
 	$data = array(); //array passed to the view
+	$lang=array();
+	$this->lang->load('translations');
+
+	$lang['name'] = $this->lang->line('name');
+	$lang['email'] = $this->lang->line('email');
+	$data['lang'] = $lang;
 	if($id){  
 		$details = $this->Contest_model->get_entry($id);
 		if ($details) {

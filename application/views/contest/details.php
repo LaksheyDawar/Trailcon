@@ -8,12 +8,12 @@
 		echo validation_errors();
 		echo form_open('contest/details'); ?>
 
-		<label>Full Name</label>
+		<label><?=$lang['name'] ?></label>
 		<br />
 		<input type ="hidden" name="id" value ="<?php if(isset($post['id'])) echo $post['id'];?>">
 		<input type="text" name="name" placeholder="Full Name" value ="<?php if(isset($post['name'])) echo $post['name'];?>" />
 		<br />
-		<label>Email</label>
+		<label><?=$lang['email'] ?></label>
 		<br />
 		<input type="text" name="email" placeholder="Email" value ="<?php if(isset($post['email'])) echo $post['email'];?>" />
 		<br />
